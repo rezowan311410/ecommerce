@@ -9,13 +9,13 @@ app.use(express.json())
 app.use(cors())
 
 
-app.get('/', function (req, res) {
-  res.json([
-    {
-        name:"rezowan"
-    }
-  ])
-})
+// app.get('/', function (req, res) {
+//   res.json([
+//     {
+//         name:"rezowan"
+//     }
+//   ])
+// })
 
 app.get('/test', function (req, res) {
   res.json([
