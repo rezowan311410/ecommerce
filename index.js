@@ -10,6 +10,14 @@ app.get('/', function (req, res) {
   ])
 })
 
+app.get('/test', function (req, res) {
+  res.json([
+    {
+        name:"try another"
+    }
+  ])
+})
+
 app.listen(7000,()=>{
     console.log(chalk.red("server connected"));
 })
