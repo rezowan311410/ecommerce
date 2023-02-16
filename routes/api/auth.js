@@ -1,7 +1,7 @@
 const express = require('express');
 const _ = express.Router();
 
-_.get('/registration',()=>{
+_.get('/registration',(req,res)=>{
     res.send('ami api route');
 })
 

@@ -3,7 +3,7 @@ const express = require('express')
 const chalk = require('chalk');
 const cors = require('cors');
 const app = express();
-const userRouter = require("./routes/userRoutes")
+
 const routes = require("./routes")
 //middle ware
 app.use(express.urlencoded({extended:true}))
@@ -29,6 +29,6 @@ app.get('/test', function (req, res) {
 
 app.use("/",routes);
 
-app.listen(7000,()=>{
+app.listen(800,()=>{
     console.log(chalk.red("server connected"));
 })
