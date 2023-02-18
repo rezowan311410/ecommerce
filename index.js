@@ -29,6 +29,6 @@ app.get('/test', function (req, res) {
 
 app.use("/",routes);
 
-app.listen(8000,()=>{
+app.listen(800,()=>{
     console.log(chalk.red("server connected"));
 })
