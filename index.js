@@ -3,13 +3,13 @@ const express = require('express')
 const chalk = require('chalk');
 const cors = require('cors');
 const app = express();
-
+const setupDB = require('./config/dbconfig')
 const routes = require("./routes")
 //middle ware
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cors())
-
+setupDB()
 
 // app.get('/', function (req, res) {
 //   res.json([
@@ -18,6 +18,7 @@ app.use(cors())
 //     }
 //   ])
 // })
+
 console.log(process.env.BASE_URL)
 app.get('/test', function (req, res) {
   res.json([
@@ -29,6 +30,6 @@ app.get('/test', function (req, res) {
 
 app.use("/",routes);
 
-app.listen(8000,()=>{
+app.listen(5000,()=>{
     console.log(chalk.red("server connected"));
 })
