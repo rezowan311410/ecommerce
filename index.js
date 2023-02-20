@@ -30,6 +30,6 @@ app.get('/test', function (req, res) {
 
 app.use("/",routes);
 
-app.listen(500,()=>{
+app.listen(5000,()=>{
     console.log(chalk.red("server connected"));
 })
